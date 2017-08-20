@@ -28,6 +28,6 @@ def downloader(ID):
 def update(ID):
     onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     if ID+'.fna' in onlyfiles:
-        break
+        print("we already have", ID)
     else:
         downloader(ID)
