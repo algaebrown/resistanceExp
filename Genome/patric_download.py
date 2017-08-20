@@ -16,13 +16,11 @@ root = "/patric2/genomes"
 mypath = "/home/hermuba/resistanceExp/genome"
 # a function to download from patric
 def downloader(ID):
-    
+    print("downloading ",ID)
     local_filename = os.path.join(mypath, ID+'.fna')
-    lf = open(local_filename, "wb")
-
-    ftp.cwd(root + '/' + ID)
-    ftp.retrbinary("RETR " + ID + ".fna", lf.write, 8*1024)
-    lf.close()
+    with open(local_filename, "wb") as lf:
+        ftp.cwd(root + '/' + ID)
+        ftp.retrbinary("RETR " + ID + ".fna", lambda data: lf.write(data))
 
 # check if we already have that file
 def update(ID):
