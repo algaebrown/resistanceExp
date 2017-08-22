@@ -1,0 +1,9 @@
+# prodigal
+git clone https://github.com/hyattpd/Prodigal.git
+make
+# add to path
+
+# CARD need to be run under py27
+conda create -n py27 python=2.7 anaconda
+source activate py27
+conda install --channel bioconda rgi 
