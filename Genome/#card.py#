@@ -24,6 +24,7 @@ def update(ID):
         run(ID)
 
 # parse card output file
+def parser(ID):
 
 
 
