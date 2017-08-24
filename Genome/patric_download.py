@@ -13,7 +13,7 @@ ftp.login(user, password)
 root = "/patric2/genomes"
 
 # path of genome
-mypath = "/home/hermuba/resistanceExp/genome"
+mypath = "../../data/genome"
 # a function to download from patric
 def downloader(ID):
     print("downloading ",ID)
