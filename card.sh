@@ -1,24 +1,20 @@
 # to dir containing .faa
-#cd ../data/genePredicted
-#ls -A1 | grep .faa | sed -e 's/\.faa//g' > oldList
-#mv oldList /home/hermuba/res
+cd ../data/genePredicted/resGeneTxt
+ls -A1 | grep .faa | sed -e 's/\.txt//g' > oldList
+mv oldList /home/hermuba/res
 
 # difference
-#cd ../../res
-#diff ../data/allgenomelist.txt oldList > needList
+cd ../../../res
+grep -F -x -v -f oldList ../data/allgenomelist.txt > needList
 
 # run
 cd /home/hermuba/data/genePredicted
 source activate py27
-cat /home/hermuba/data/allgenomelist.txt | parallel rgi -t 'protein' -i {}.faa -o {}
+cat /home/hermuba/res/needList | parallel rgi -t 'protein' -i {}.faa -o {}
 
 # move to where it should be
-mv *.json ./resGeneJson
-mv *.txt ./resGeneTxt
+#mv *.json ./resGeneJson
+#mv *.txt ./resGeneTxt
 
 #
 source deactivate py27
-
-
-
-

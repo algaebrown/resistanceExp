@@ -33,8 +33,9 @@ for line in f:
             sim_sum = sim_sum + identity
             len_sum = len_sum + length
             mem_dict[gene_name + '|' + ID] = [identity, length]
-            cluster_detail.loc[columnName, 'mean similarity'] = sim_sum / number
-            cluster_detail.loc[columnName, 'mean length'] = length / number
+            if number > 0:
+                cluster_detail.loc[columnName, 'mean similarity'] = sim_sum / number
+                cluster_detail.loc[columnName, 'mean length'] = length / number
 
 
 df = df.fillna(False)
