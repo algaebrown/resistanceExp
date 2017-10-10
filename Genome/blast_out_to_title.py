@@ -13,7 +13,7 @@ with open(blast_result) as f:
     for line in f:
         accession = line.split('\t')[1]
         gene_header = line.split('\t')[0]
-        identity = float(line.split[2])
+        identity = float(line.split('\t')[2])
 
         # search entrez for idlist
         handle = Entrez.esearch(db = "protein", term = accession)
@@ -24,6 +24,7 @@ with open(blast_result) as f:
         handle = Entrez.esummary(db = "protein", id = ID)
         record = Entrez.read(handle)
         title = record[0]['Title']
+        print(title)
 
         # save into df
         df.loc[gene_header, :] = [accession, identity, ID, title]
