@@ -35,7 +35,7 @@ def random_split(df, portion):
     all_train = []
     all_test = []
     for label in [positive, negative]:
-        print(label)
+    
         arr = np.arange(len(label))
 
         np.random.shuffle(arr)
@@ -74,7 +74,6 @@ def preprocessing(df_ris,portion):
 
     y_train = y[train_index]
     y_test = y[test_index]
-    print(len(y_test), sum(y_test))
     X_train.reset_index(inplace = True, drop = True)
     y_train.reset_index(inplace = True, drop = True)
 
@@ -133,7 +132,7 @@ def train_SVM(df_ris, portion):
     clf = svm.SVC(kernel='linear', C=1, probability = True).fit(X_train, y_train)
 
     # cross validation
-    skf = StratifiedKFold(n_splits=2, random_state=None, shuffle=True)
+    skf = StratifiedKFold(n_splits=2, random_state=None, shuffle=False)
     cv = skf.split(X_train, y_train)
 
     # tune hyperparameters
@@ -156,18 +155,20 @@ def run_hundred(model, df, portion):
 
     for i in range(100):
         returning = model(df,portion)
+        
         if 0 not in returning: # if no auc ValueError
+            
+            sum_score = np.append(sum_score, np.asarray([returning]), axis = 0)
+        #else:
+        #    print("unsucessful AUC/Precision/F score")
 
-
-            sum_score = np.append(sum_score, np.asarray([model(df, portion)]), axis = 0)
-        else:
-            print("unsucessful AUC/Precision/F score")
     std = np.std(sum_score, axis = 0)
     mean = np.mean(sum_score, axis = 0)
+    print(sum_score)
     return(np.append(mean, std))
 
 #those drugs have nearly 50 data, therefore their data are selected for training
-train_drug = ['meropenem','cefepime','ceftazidime' ,'gentamicin', 'ciprofloxacin','trimethoprim_sulfamethoxazole', 'ampicillin', 'cefazolin', 'ampicillin_sulbactam']
+train_drug = ['meropenem','cefepime','ceftazidime' ,'gentamicin', 'ciprofloxacin','trimethoprim_sulfamethoxazole', 'ampicillin', 'cefazolin', 'ampicillin_sulbactam', 'ceftriaxone', 'piperacillin_tazobactam', 'tobramycin']
 
 prefix = ['card_pattern', 'gene_pattern', 'acc_pattern', 'acc_card_pattern']
 portion = [0.6, 0.8]
@@ -192,4 +193,4 @@ def run_drug(d):
 
 #if __name__=='__main__':
 with Pool(8) as p:
-    print(p.map(run_drug, ['ceftriaxone','tobramycin', 'piperacillin_tazobactam']))
+    print(p.map(run_drug, train_drug))
