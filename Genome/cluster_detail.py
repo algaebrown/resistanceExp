@@ -1,8 +1,8 @@
 import pandas as pd
-cluster_detail = pd.read_pickle("/home/hermuba/data/genePredicted/cdhit/cluster_detail_df")
+cluster_detail = pd.read_pickle("/home/hermuba/res/data/genePredicted/cdhit/cluster_detail_df")
 
 #add cog_category
-with open("/home/hermuba/data/cog/ecoli.cog.list") as f:
+with open("/home/hermuba/res/data/cog/ecoli.cog.list") as f:
     for line in f:
         line = line.replace('\n', '')
         genome_id = line.split('\t')[0]
@@ -32,4 +32,8 @@ for clu in cluster_detail.index:
     cluster_detail.loc[clu, "card_count"] = count
 
 # add "prevalance" to cluster_detail
+df = pd.read_pickle("/home/hermuba/res/data/genePredicted/cdhit/ec0102_df")
+prevalance = df.mean(axis = 0)
+cluster_detail['prevalance'] = prevalance
 # cluster_detail['prevalance'] = df.mean() # __% genome has that gene
+cluster_detail.to_pickle("/home/hermuba/res/data/genePredicted/cdhit/cluster_detail_df")
