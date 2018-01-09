@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 cluster_detail = pd.read_pickle("/home/hermuba/data/genePredicted/cdhit/cluster_detail_df")
@@ -24,7 +23,7 @@ def card_in_cluster(cluster_name):
     df = pd.read_pickle("/home/hermuba/data/genePredicted/card_detail_df/"+rep_id)
 
     if rep_protein in df.index:
-
+       
        rep_best = df.loc[rep_protein, 'best_ARO']
        rep_aro = df.loc[rep_protein, 'ARO']
        rep_aro_id = df.loc[rep_protein, 'ARO_name']
@@ -65,3 +64,4 @@ cluster_detail['prevalance'] = prevalance
 # cluster_detail['prevalance'] = df.mean() # __% genome has that gene
 cluster_detail.to_pickle("/home/hermuba/data/genePredicted/cdhit/cluster_detail_df")
 cluster_detail.to_excle("/home/hermuba/data/genePredicted/cdhit/cluster_detail.xlsx")
+
