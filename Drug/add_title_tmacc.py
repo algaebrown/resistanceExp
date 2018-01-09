@@ -5,7 +5,7 @@ csv = '/home/hermuba/data/drug/all_five.csv'
 import pybel
 import pandas as pd
 
-df = pd.read_csv(csv)
+df = pd.read_csv(csv, index_col = False)
 df.shape
 n = []
 for molecule in pybel.readfile("sdf",multiple_sdf):
