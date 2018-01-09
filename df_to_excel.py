@@ -1,7 +1,7 @@
 import pandas as pd
 
 path = "/home/hermuba/data/ml_results/"
-train_drug = ['meropenem','cefepime','ceftazidime' ,'gentamicin', 'ciprofloxacin','trimethoprim_sulfamethoxazole', 'ampicillin', 'cefazolin', 'ampicillin_sulbactam']
+train_drug = ['meropenem','cefepime','ceftazidime' ,'gentamicin', 'ciprofloxacin','trimethoprim_sulfamethoxazole', 'ampicillin', 'cefazolin', 'ampicillin_sulbactam', 'ceftriaxone','tobramycin', 'piperacillin_tazobactam']
 
 all_df = pd.DataFrame()
 for i in train_drug:
