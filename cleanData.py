@@ -19,7 +19,7 @@ c = {'Genome ID' : str, 'Taxon ID' : str, 'Genome Name': str, 'Antibiotic': str,
 entero_df = pd.read_excel(excel_path + 'PATRIC_genome_amr_escherichia_20180108.xlsx', converters = c)
 acineto_df = pd.read_excel(excel_path + 'PATRIC_genome_amr_acineto_20180108.xlsx', converters = c)
 pseudo_df = pd.read_excel(excel_path + 'PATRIC_genome_amr_pseudo_20180108.xlsx',converters = c)
-old_entero_df = pd.read_excel(excel_path + 'entero.xlsx', converters = c)
+old_entero_df = pd.read_excel(excel_path + 'PATRIC_genome_amr_20170708.xlsx', converters = c)
 
 # combine to one df
 frames = [entero_df, acineto_df, pseudo_df, old_entero_df]
@@ -125,5 +125,7 @@ test, train, total = filtering(total_df)
 name = ['test_data', 'clean_data', 'total_data']
 dfs = [test, train, total]
 for i in range(3):
-    df = data_type_conversion(genome_list(rm_annotate_sps(process_drug(dfs[i]))))
-    df.to_pickle("../data0118"+name[i])
+    s = rm_annotate_sps(process_drug(dfs[i]))
+    genome_list(s)
+    df = data_type_conversion(s)
+    df.to_pickle("../data0118/"+name[i])

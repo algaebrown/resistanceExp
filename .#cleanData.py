@@ -1,1 +1,0 @@
-hermuba@metagenome.tmu.edu.tw.20093:1510398380
