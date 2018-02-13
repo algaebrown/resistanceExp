@@ -156,7 +156,7 @@ def run_hundred(model, df, portion):
     for i in range(100):
         returning = model(df,portion)
         returning_for_check = np.array(returning)
-        if 0 not in returning_for_check[2,3,5]: # if no auc ValueError, precision, f score
+        if 0 not in returning_for_check[[2,3,5]]: # if no auc ValueError, precision, f score
 
             sum_score = np.append(sum_score, np.asarray([returning]), axis = 0)
         #else:
@@ -193,4 +193,4 @@ def run_drug(d):
 
 #if __name__=='__main__':
 with Pool(8) as p:
-    print(p.map(run_drug, ['piperacillin_tazobactam']))
+    print(p.map(run_drug, train_drug))
