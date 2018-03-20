@@ -1,14 +1,14 @@
 import os
 
-genome_path = "/home/hermuba/data/genome-gogo"
-gene_path = "/home/hermuba/data/genePredicted"
+genome_path = "/home/hermuba/data/genome/"
+gene_path = "/home/hermuba/data0118/predicted_genes/"
 # to run prodigal
 
 def run(ID):
-    print("running prodigal for " + ID) 
-    os.system("prodigal -i "+ genome_path +'/'+ ID + ".fna -o garbage.gbk -a "+ ID+".faa")
-    os.system("mv "+ID+".faa ../genePredicted/"+ID+".faa")
-    os.system("rm garbage.gbk")
+    print("running prodigal for " + ID)
+    os.system("prodigal -i "+ genome_path +'/'+ ID + ".fna -o garbage.gbk -a "+ ID+".faa -p meta")
+
+
 
 # check if we already did it
 def update(ID):
