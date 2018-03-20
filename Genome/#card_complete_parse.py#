@@ -1,3 +1,4 @@
+
 card_path = '/home/hermuba/data/genePredicted/resGeneTxt'
 
 with open("/home/hermuba/data/genomeList/ECgenome.txt") as f:
