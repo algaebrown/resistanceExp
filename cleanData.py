@@ -69,8 +69,8 @@ def process_drug(df):
     to_txt(df['Antibiotic'].unique(), 'drug')
     return(df)
 
-sps_dict = {'Pseudomonas': 'Pseudomonas aeruginosa',
-            'Acinetobacter': 'Acinetobacter spp.',
+sps_dict = {'Pseudomonas': 'Pseudomonas',
+            'Acinetobacter': 'Acinetobacter',
             'Klebsiella': 'Klebsiella',
             'Escherichia': 'Escherichia',
             'Salmonella': 'Salmonella',
@@ -100,11 +100,12 @@ def genome_list(df):
     # species-wise
 
     for sps in df['Species'].unique():
-        genome_list = df.loc[df['Species'] == sps]['Genome ID'].unique()
-        to_txt(genome_list, sps)
+        g_list = df.loc[df['Species'] == sps]['Genome ID'].unique()
+        to_txt(g_list, sps)
+        print(sps, len(g_list))
     # altogether
-    genome_list = df['Genome ID'].unique()
-    to_txt(genome_list, 'all')
+    g_all_list = df['Genome ID'].unique()
+    to_txt(g_all_list, 'all')
 
 def data_type_conversion(df):
     cat_dict = {}
