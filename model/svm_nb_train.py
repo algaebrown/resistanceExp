@@ -94,7 +94,7 @@ def evaluate(model, X_test, y_test):
 # run naive bayes
 def train_nb(df_ris, portion):
     X_train, X_test, y_train, y_test = preprocessing(df_ris, portion)
-
+    print(sum(y_train), len(y_train))
 
     # seperate train and test into k fold
     n=10
@@ -154,9 +154,12 @@ def run_hundred(model, df, portion):
     sum_score = np.empty((0,6), int)
 
     for i in range(100):
+
         returning = model(df,portion)
         returning_for_check = np.array(returning)
+
         if 0 not in returning_for_check[[2,3,5]]: # if no auc ValueError, precision, f score
+
 
             sum_score = np.append(sum_score, np.asarray([returning]), axis = 0)
         #else:
@@ -192,5 +195,10 @@ def run_drug(d):
     total.to_pickle("/home/hermuba/data/"+d+'_ml_df')
 
 #if __name__=='__main__':
+<<<<<<< HEAD
 with Pool(8) as p:
     print(p.map(run_drug, train_drug))
+=======
+#with Pool(8) as p:
+#    print(p.map(run_drug, ['piperacillin_tazobactam']))
+>>>>>>> multi_org

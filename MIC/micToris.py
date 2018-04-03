@@ -1,6 +1,11 @@
 import pandas as pd
 # for each row
-clsi = pd.read_excel("../../data/CLSI_m100_breakpoint.xlsx", converters = {'R_breakpoint(>=)': str, 'S_breakpoint(<=)': str})
+clsi = pd.read_excel("/home/hermuba/data/annotated_RIS/CLSI_m100_breakpoint.xlsx", converters = {'R_breakpoint(>=)': str, 'S_breakpoint(<=)': str})
+
+clsi['drug'] = clsi['drug'].str.lower()
+clsi['drug'] = clsi['drug'].str.replace('/', '-')
+clsi['drug'] = clsi['drug'].str.replace('clavulanic acid', 'clavunate')
+clsi['drug'].unique()
 
 def identify_sps(row):
 
@@ -58,9 +63,13 @@ def mic_to_ris(row):
 
 
 def compare_mic(measurement, sign, r_break, s_break):
+    measurement = float(measurement)
+    r_break = float(r_break)
+    s_break = float(s_break)
+    print(type(measurement), type(r_break), type(s_break))
     if measurement >= r_break:
         if sign in ['<', '<=']:
-            result = "Not defined"
+            result = "Non-resistant"
         else:
             result = "Resistant"
     elif measurement <= s_break:
@@ -69,11 +78,11 @@ def compare_mic(measurement, sign, r_break, s_break):
         else:
             result = "Susceptible"
     else:
-        if type(sign) == float:
+        if type(sign) == float or sign == "==":
             result = "Intermediate"
         elif sign in ['>=', ">"]:
             result = "Non-susceptible"
         else:
-            result = "Not defined"
+            result = "Non-resistant"
 
     return(result)
