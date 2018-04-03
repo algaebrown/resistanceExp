@@ -1,6 +1,7 @@
 # readfile
 
 cdhit_result = '../../data/genePredicted/cdhit/ec0913.clstr'
+
 f = open(cdhit_result)
 
 # create dataframe
