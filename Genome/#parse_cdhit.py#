@@ -68,7 +68,7 @@ def clstr_to_df(filename,dfpath, detailpath):
     df = df.fillna(False)
     df.to_pickle(dfpath+f_name+'df')
     cluster_detail.to_pickle(detailpath+f_name+'df')
-    f.close()
+    
 
 # a function with one input:
 from multiprocessing import Pool

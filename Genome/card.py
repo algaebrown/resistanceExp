@@ -1,7 +1,8 @@
 # a script to run CARD(comprehensive antibiotic resistance database) annotation
 
 # path
-gene_path = "/home/hermuba/resistanceExp/genePredicted"
+gene_path = "/home/hermuba/data0118/predicted_genes/"
+out_path = gene_path + 'card/'
 txt_path = "/home/hermuba/resistanceExp/genePredicted/resGeneTxt"
 json_path = "/home/hermuba/resistanceExp/genePredicted/resGeneJson"
 # import
@@ -11,10 +12,7 @@ import os, errno
 def run(ID):
     print("running CARD annotation for "+ID)
     os.chdir(gene_path)
-    os.system("rgi -t 'protein' -i "+ ID +".faa -o " + ID)
-    os.system("mv "+ ID+".txt "+ txt_path)
-    os.system("mv "+ ID+".json "+ json_path)
-
+    os.system("rgi -n 10 -t 'protein' -i "+ ID +".faa -o " + out_path + ID)
 # update
 def update(ID):
     onlyfiles = [f for f in os.listdir(txt_path) if os.path.isfile(os.path.join(txt_path, f))]
