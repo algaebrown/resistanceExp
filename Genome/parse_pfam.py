@@ -1,5 +1,5 @@
 #
-pfam_path = "/home/hermuba/data0118/cdhit/pfam/"
+pfam_path = "/home/hermuba/data0118/pfam/"
 
 import pandas as pd
 def parse(filename):
