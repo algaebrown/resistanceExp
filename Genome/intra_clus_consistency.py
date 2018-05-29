@@ -55,7 +55,16 @@ def find_pfam(genome_id, gene_name):
 
     return(all_hmm['hmm name'].drop_duplicates().to_string(index = False))
     #return(pfam.loc[pfam['seq id'] == gene_name]['hmm name'].to_string(index = False))
+def find_best_pfam(genome_id, gene_name):
+    pfam = pd.read_pickle(pfam_path + genome_id + '.faa')
+    all_hmm = pfam.loc[pfam['seq id'] == gene_name]
 
+    try:
+        best = all_hmm.loc[all_hmm['E-value'].idxmin()]['hmm name']
+        return(best)
+    except ValueError:
+        print(genome_id, gene_name, 'has no pfam')
+        return('empty')
 def find_mem_comp(df, comp_path, comp_type):
     """
     find all aro (if exist) within a cluster, if the member belongs to the 100 genome
@@ -83,7 +92,10 @@ def find_mem_comp(df, comp_path, comp_type):
                     if comp_type == 'pfam':
                         c = find_pfam(genome_id, gene_name)
                         all_comps.append(c)
+                    if comp_type == 'best_pfam':
 
+                        c = find_best_pfam(genome_id, gene_name)
+                        all_comps.append(c)
                 except KeyError:
                     #print(gene_name, genome_id, 'card annotation not found')
                     do_nothing = 0
@@ -95,6 +107,7 @@ def consistency(l):
     index = 0
     for clus in l:
         if len(clus)>0:
+
             index = index + 1
             members = set(clus)
             how_many_kind = len(members)
