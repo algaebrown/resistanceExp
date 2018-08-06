@@ -60,7 +60,8 @@ def ggpid_concat(evex_id_df):
     concat_ggpid = ''
     for ggp in unique_no_empty:
         concat_ggpid = concat_ggpid + ',' + ggp
-    return(concat_ggpid)
+
+    return(concat_ggpid[1:])
 
 # fetch_network
 def fetch_evex_network(ggpid_list):
@@ -69,3 +70,17 @@ def fetch_evex_network(ggpid_list):
     url = 'http://evexdb.org/api/v001/fetch_network/?ggpIdList=' + ggpid_list + '&family=egenomes'
     r = requests.get(url)
     return(r)
+
+def net_xml_df(r):
+    df = pd.DataFrame(columns = ['source', 'sourceName', 'target', 'targetName', 'coarseType', 'refinedType', 'coarsePolarity', 'refinedPolarity', 'event', 'direction', 'averageConfidence', 'negation', 'speculation'])
+    root = ET.fromstring(r.text)
+    result = root[1]
+    for i in range(len(result)):
+        link = result[i]
+        print(link.text)
+        attr_list = []
+        for j in range(13):
+            attr_list.append(link[j].text)
+        df.loc[i] = attr_list
+
+    return(df)

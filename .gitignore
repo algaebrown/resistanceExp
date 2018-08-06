@@ -1,0 +1,3 @@
+# do not upload database passwd
+*.ini
+
