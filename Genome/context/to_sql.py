@@ -3,15 +3,16 @@ import sys
 sys.path.append('/home/hermuba/resistanceExp/')
 
 # specify those params:
-table_name = 'eskape'
+table_name = 'blastp_out'
+infile = '/home/hermuba/data0118/test.tsv'
 
 import psycopg2
 import Genome.context.config
 
-def blastp_to_table(c, conn):
+def blastp_to_table(c, conn, infile):
     # create table
     c.execute("""
-    CREATE TABLE %s (
+    CREATE TABLE {0} (
 
         target_genome text,
         qseqid text,
@@ -29,7 +30,7 @@ def blastp_to_table(c, conn):
 
 
         )
-    """, table_name)
+    """.format(table_name))
     conn.commit()
 
 
@@ -42,9 +43,9 @@ def blastp_to_table(c, conn):
     #    c.execute("INSERT INTO blastp_out VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s%s,%s)", t)
 
     # instead use copy_form
-    with open("/home/hermuba/data0118/main.tsv") as f:
-    #with open("/home/hermuba/data0118/test.tsv") as f:
-        c.copy_from(f, 'blastp_out', sep = '\t')
+    with open(infile) as f:
+
+        c.copy_from(f, table_name, sep = '\t')
     conn.commit()
 
 
@@ -55,7 +56,7 @@ try:
     params = config()
 
     # test
-    #params['database'] = 'hermuba'
+    params['database'] = 'hermuba'
 
     # connect
     print("connecting to the DB")
@@ -63,7 +64,7 @@ try:
     cur = conn.cursor()
 
     # insert command
-    blastp_to_table(cur,conn)
+    blastp_to_table(cur,conn, infile)
 
 except (Exception, psycopg2.DatabaseError) as error:
     print(error)
