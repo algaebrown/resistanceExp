@@ -3,8 +3,8 @@ import sys
 sys.path.append('/home/hermuba/resistanceExp/')
 
 # specify those params:
-table_name = 'blastp_out'
-infile = '/home/hermuba/data0118/test.tsv'
+table_name = 'eskape_blastp_out'
+infile = '/home/hermuba/data0118/concat_phylo/eskape.tsv'
 
 import psycopg2
 import Genome.context.config
@@ -56,7 +56,7 @@ try:
     params = config()
 
     # test
-    params['database'] = 'hermuba'
+    #params['database'] = 'hermuba'
 
     # connect
     print("connecting to the DB")
