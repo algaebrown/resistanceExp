@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashx
 
 for file in *
 do
