@@ -1,12 +1,11 @@
-
-# input: postgresql blastp_out_max_evalue table, with qseqid, evalue, target genome
+# input: postgresql blastp_out_max_evalbue table, with qseqid, evalue, target genome
 # output:
 
 import psycopg2
 from Genome.context.config import config
 
 params = config()
-#params['database'] = 'hermuba' ##test
+params['database'] = 'hermuba' ##test
 
 table_name = 'blastp_abs'
 in_table = 'blastp_out_max_evalue'
@@ -14,23 +13,28 @@ conn = psycopg2.connect(**params)
 cur = conn.cursor()
 
 cur.execute("""
-SELECT DISTINCT target_genome
+SELECT DISTINCT qseqid
 
 FROM {0}
 """.format(in_table))
 row_list = [i[0] for i in cur.fetchall()]
-row_string = ''
 
-for row in row_list:
-    row_string = row_string + '\"'+ row + '\"'+' ' + 'decimal' + ','
 
-cur.execute("""
-    SELECT *
-    INTO {0}
-    FROM crosstab('select qseqid, target_genome, evalue from {1}')
-    AS {0}(qseqid text, {2})
+def two_genes(gene_one, gene_two):
+    def add_quote(gene):
+        return('\'' + gene + '\'')
 
-    """.format(table_name, in_table, row_string[:-1]))
+    row_string = '\"' + gene_one + '\"'+ 'decimal,' + '\"'+ gene_two +'\"'+ 'decimal'
+    cur.execute("""
+    select * from crosstab($$select target_genome,qseqid,evalue from {0}
+    where qseqid = {1} or qseqid = {2}$$)
+    as t(target_genome text, {3})
+
+    """.format(in_table, add_quote(gene_one), add_quote(gene_two), row_string))
+    x = cur.fetchall()
+    return(x)
+
+x = two_genes('JMUY01000001_12314386703', 'JMUY01000001_6314386703')
 conn.commit()
 cur.close()
 conn.close()
