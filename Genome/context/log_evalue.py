@@ -5,31 +5,34 @@ in_table = 'blastp_out_max_evalue'
 
 # import
 import psycopg2
-import Genome.context.config
+from Genome.context.config import config
 
 params = config()
-params['database'] = 'hermuba' ##test
+#params['database'] = 'hermuba' ##test
 
 conn = psycopg2.connect(**params)
 cur = conn.cursor()
 
 cur.execute("""
+SET ROLE mydba
+""") # a temporary role for root for permission of plpythonu
+
+cur.execute("""
 CREATE FUNCTION log_evalue (a decimal)
   RETURNS decimal
 AS $$
-  for i in a:
-      if a >= 1:
-         0 ########
-      else:
-        import numpy as np
-        return np.log(a)/415 ######
+if a >= 1:
+    return(0)
+if a <= 0:
+    print(1)
+else:
+    import math
+    return(math.log(a)/(-415))
 $$ LANGUAGE plpythonu;
 
 """)
 
-cur.commit()
-cur.execute("""
-SELECT evalue
+conn.commit()
 
-
-""")
+cur.close()
+conn.close()
