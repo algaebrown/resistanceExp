@@ -80,8 +80,8 @@ def entropy(series):
       return(stats.entropy(ser))
 
 # discretise a pair of e-value series and calculcate mutual information, then write to file
-def two_mutual(combination):
 
+def two_mutual(combination):
     gene_one = combination[0]
     gene_two = combination[1]
 
