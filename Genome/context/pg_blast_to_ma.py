@@ -79,7 +79,7 @@ def entropy(series):
       ser = series.value_counts/len(series)
       return(stats.entropy(ser))
 
-# discretise a pair of e-value series and calculcate mutual information, then write to file
+# discretise a pair of e-value series and calculcate mutual information, then write xoto file
 
 def two_mutual(combination):
     gene_one = combination[0]
