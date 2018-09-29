@@ -1,1 +1,2 @@
-interproscan.sh --input ~/data0118/cdhit/Escherichia0.70_rm_aster --cpu 16 --goterm --pathways --seqtype p -o ~/data0118/interpro_ec70 -f tsv
+fname=$1
+bash interproscan.sh --input ~/data0118/cdhit/split_ec/$fname --cpu 8 --goterm --pathways --seqtype p -o ~/data0118/interpro/${fname%.*} -f tsv
