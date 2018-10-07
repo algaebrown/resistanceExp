@@ -56,7 +56,7 @@ def gold_standard(no_redun_go):
 
     # write header
     with open(outfile, 'w') as f:
-        f.write('gene1,gene2,answer\n')
+        f.write('gene1,gene2,answer\1n')
 
 
     import itertools

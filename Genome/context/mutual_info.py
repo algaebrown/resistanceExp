@@ -1,7 +1,7 @@
 
 # input: discretised pivot table, two kinds: quantile discretisation and fixed
 in_path = '/home/hermuba/data0118/mutual_info/'
-table_name = 'eskape_blastp_out_max_evalue'
+table_name = 'blastp_out_max_evalue'
 
 
 ordinary = in_path + table_name + '_ordinary_label'

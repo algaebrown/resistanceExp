@@ -1,6 +1,6 @@
 # input: pivot table
 in_path = '/home/hermuba/data0118/mutual_info/'
-table_name = 'eskape_blastp_out_max_evalue'
+table_name = 'blastp_out_max_evalue'
 
 in_file = in_path + table_name + '_pivot'
 #quantile = in_path + table_name + '_quantile'
