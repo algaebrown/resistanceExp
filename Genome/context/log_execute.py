@@ -24,6 +24,5 @@ SET trans_evalue =  log_evalue(evalue)
 
 
 conn.commit()
-
 cur.close()
 conn.close()
