@@ -3,7 +3,7 @@ goldstandard = '/home/hermuba/data0118/goldstandard/tf_intersect'
 
 phylo_path = '/home/hermuba/data0118/mutual_info/'
 
-refseq_test = phylo_path + 'blastp_out_max_evalue_ordinary_label_mutual'
+refseq_test = phylo_path + 'blastp_out_max_evalue_ordinary_mutual'
 eskape_test = phylo_path + 'eskape_blastp_out_max_evalue_ordinary_mutual'
 
 # database parameters
@@ -59,8 +59,8 @@ try:
 
     # run
     #gold_table(cur,conn, goldstandard, 'tf_intersect')
-    mutual_info(cur,conn, refseq_test, 'refseq_mu')
-    #mutual_info(cur,conn, eskape_test, 'eskape_mu')
+    #mutual_info(cur,conn, refseq_test, 'refseq_mu')
+    mutual_info(cur,conn, eskape_test, 'eskape_mu')
 
 except (Exception, psycopg2.DatabaseError) as error:
     print(error)

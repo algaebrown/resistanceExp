@@ -5,8 +5,6 @@ in_table = 'eskape_blastp_out_max_evalue'
 
 base_path = '/home/hermuba/data0118/mutual_info/'+ in_table
 pivot_table = base_path + '_pivot'
-qcut = base_path + '_qcut'
-cut = base_path + '_cut'
 
 conn = psycopg2.connect(**params)
 cur = conn.cursor()
@@ -14,7 +12,10 @@ cur = conn.cursor()
 # get list of protein of interest
 print("getting protein list")
 # index was added to table to speed up search
-
+cur.execute("""
+CREATE INDEX ON {0} (qseqid)
+""".format(in_table))
+conn.commit()
 
 cur.execute("""
 SELECT DISTINCT qseqid
@@ -25,6 +26,11 @@ protein_list = [i[0] for i in cur.fetchall()]
 
 # get list of target genome
 print("getting target genome list")
+cur.execute("""
+CREATE INDEX ON {0} (target_genome)
+""".format(in_table))
+conn.commit()
+
 cur.execute("""
 SELECT DISTINCT target_genome
 FROM {0}
