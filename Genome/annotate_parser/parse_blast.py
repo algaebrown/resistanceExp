@@ -1,11 +1,19 @@
-blast_file = '/home/hermuba/data0118/Ecoli70Blast_e10-5tar1'
-
 import pandas as pd
 def parse_blast(blast_file):
+    """
+    To parse blastp nr output to dataframe
+    input: blastp --in qseqid, sseqid, evalue, bitscore, sgi, sacc, staxods, stitle; TAB-delimited
+    output: dataframe
+    """
     df = pd.read_csv(blast_file, names = ['qseqid', 'sseqid', 'evalue', 'bitscore', 'sgi', 'sacc', 'staxids', 'stitle'], delimiter = '\t')
-    df.to_pickle('/home/hermuba/data0118/ec_test_tar1')
+    return(df)
 
 def parse_diamond(dmnd_file):
-    df = pd.read_csv(dmnd_file, names = ['qseqid', 'sseqid', 'evalue', 'bitscore', 'staxids', 'stitle', 'sseq'], delimiter = '\t')
-    # --outfmt qseqid sseqid evalue bitscore staxids stitle sseq
+    '''
+    parsing data output from diamond blastp nr
+    input: file from Genome/run/dmnd_nr.sh; storing in data0118/cdhit/dmnd_nr;
+    output: dataframe
+    '''
+    df = pd.read_csv(dmnd_file, names = ['qseqid','qlen', 'sseqid','slen','sstart', 'send', 'qstart', 'qend', 'evalue', 'bitscore', 'stitle', 'qtitle'], delimiter = '\t')
+
     return(df)
