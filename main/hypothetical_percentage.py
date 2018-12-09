@@ -7,7 +7,7 @@ Purpose: To calcualte hypothetical protein portion in 6 pan-genomes
 
 # input file: 6 pan-genomes' representing gene, use diamond blastp against nr database
 input_path = '/home/hermuba/data0118/cdhit/dmnd_nr/'
-output_path = '/home/hermuba/data0118/cdhit/cluster_blast_hypo'
+output_path = '/home/hermuba/data0118/cdhit/cluster_blast_hypo/'
 
 from Genome.annotate_parser.parse_blast import parse_diamond
 from Genome.pangenome_annotate.hypothetical import *
@@ -29,7 +29,7 @@ def pangenome_size(species):
         return(i) # i+1 lines; but the first line is header
 
 # main
-for sps in ['Escherichia', 'Acinetobacter', 'Enterobacter', 'Klebsiella', 'Citrobacter']:
+for sps in ['Escherichia', 'Acinetobacter', 'Enterobacter', 'Citrobacter', 'Klebsiella', 'Pseudomonas', 'Salmonella']:
     df = combined(sps)
     df.to_pickle(output_path + sps + '0.70_nr_hypo_df')
     size = pangenome_size(sps)
