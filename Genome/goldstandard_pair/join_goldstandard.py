@@ -2,7 +2,7 @@
 gold_std= "tf_intersect"
 
 # could be anything; eskape_mu
-exp_table="refseq_mu"
+exp_table="refseq_quantile_mu"
 
 
 
@@ -76,7 +76,7 @@ def left_join(exp_table, gold_std, c, conn):
 conn = None
 try:
     params = config()
-    #params['database'] = 'hermuba'
+    params['database'] = 'hermuba'
     #exp_table = 'refseq_mu_test'
     #### for test
 
@@ -86,8 +86,9 @@ try:
     c = conn.cursor()
 
     # run
+    #print("replacing ID") #### needed when doing refseq
     #replace_id(exp_table, c, conn)
-    exp_table = 'eskape_mu'
+    print("join table")
     left_join(exp_table, gold_std, c, conn)
 
 except(Exception, psycopg2.DatabaseError) as error:

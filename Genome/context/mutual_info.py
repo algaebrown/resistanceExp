@@ -4,7 +4,7 @@ in_path = '/home/hermuba/data0118/mutual_info/'
 table_name = 'blastp_out_max_evalue'
 
 
-ordinary = in_path + table_name + '_quantile'
+ordinary = in_path + table_name + '_quantile_2'
 
 path = ordinary
 #path = in_path + 'test' #### test file only 100 lines
