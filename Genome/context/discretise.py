@@ -10,11 +10,19 @@ from  multiprocessing import Pool
 
 
 # fillna, discretise using two methods:
-def ordinary(df, dataset):
+def ordinary(df, dataset, **kwargs):
     df.fillna(0, inplace = True)
     c_table = pd.DataFrame(index = df.index, columns = df.columns)
+
+    # change bins
+    if len(kwargs) > 0:
+        bins = kwargs['bins']
+
+    else:
+        bins = 415
+
     for index, rows in df.iterrows():
-        c_table.loc[rows.name] = pd.cut(rows, 415, labels = False)
+        c_table.loc[rows.name] = pd.cut(rows, bins, labels = False)
     return(c_table)
 
 
@@ -44,7 +52,7 @@ def quantile(df, dataset):
 
 
 
-def run_chunkwise(in_file, discrete_method, dataset):
+def run_chunkwise(in_file, discrete_method, dataset, **kwargs):
     '''
     Taking transformed e-value table as the input; discretize using two methods
     input:
@@ -56,16 +64,22 @@ def run_chunkwise(in_file, discrete_method, dataset):
     in_path = '/home/hermuba/data0118/mutual_info/'
 
     # read file as chunk (chunksize = 100)
-    chunks = pd.read_csv(in_file, header = 0, index_col = 0, chunksize = 100, iterator = True)
+    chunks = pd.read_csv(in_path + in_file, header = 0, index_col = 0, chunksize = 100, iterator = True)
     no_chunk = 0
 
     # run discretise for each chunk
     for chunk in chunks:
         print('running chunk ',no_chunk)
-        c = discrete_method(chunk, dataset)
+        if len(kwargs) > 0:
+            b = kwargs['bins']
+            c = discrete_method(chunk, dataset,bins = b)
+            outfile = in_path + in_file +'_'+ discrete_method.__name__+str(b)
+        else:
+            c = discrete_method(chunk, dataset)
+            outfile = in_path + in_file +'_'+ discrete_method.__name__
 
-        # write to file chunkwise
-        outfile = in_path + table_name + discrete_method.__name__
+
+
 
         # add header to first line
         if no_chunk == 0:
