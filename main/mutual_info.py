@@ -1,51 +1,17 @@
 
 # input: discretised pivot table, two kinds: quantile discretisation and fixed
 in_path = '/home/hermuba/data0118/mutual_info/'
-table_name = 'blastp_out_max_evalue'
-
-
-ordinary = in_path + table_name + '_quantile_2'
-
-path = ordinary
-#path = in_path + 'test' #### test file only 100 lines
-
+path = in_path + 'blastp_out_max_evalue_pivot.smpl_ordinary40'
 outfile = path + '_mutual'
 
-# input two series, output mutual_info and normalised mutual info
-from sklearn import metrics
-import multiprocessing as mp
-from  multiprocessing import Pool
-import time
-import pandas as pd
-from itertools import product, combinations
-# entropy
-def entropy(series):
-      import scipy.stats as stats
-      ser = series.value_counts/len(series)
-      return(stats.entropy(ser))
+from Genome.context.mutual import *
 
-def two_genes_mutual(args):# within one chunk
-    ser_one, ser_two= args
-    global mode
-    global save
-    global chunk
-    global other_chunk
-
-    if mode == 'one_chunk':
-        orn = metrics.mutual_info_score(chunk[ser_one], chunk[ser_two])
-        nrm = metrics.normalized_mutual_info_score(chunk[ser_one], chunk[ser_two])
-    if mode == 'two_chunk':
-        orn = metrics.mutual_info_score(chunk[ser_one], other_chunk[ser_two])
-        nrm = metrics.normalized_mutual_info_score(chunk[ser_one], other_chunk[ser_two])
-
-
-    with open(outfile, 'a') as f:
-          f.write(ser_one +','+ ser_two+',' + str(orn)+',' + str(nrm) + '\n')
-    #save = save + ser_one +','+ ser_two+',' + str(orn)+',' + str(nrm) + '\n'
-
+t0 = time.time()
 # main
 chunk_iter1 = pd.read_csv(path, chunksize = 50, header = 0, index_col = 0)
 chunk_no = 0
+
+
 t1 = time.time()
 # write header to csv
 with open(outfile, 'w') as f:
@@ -61,11 +27,13 @@ for chunk in chunk_iter1:
 
     # all combinations of a chunk
     pairs = list(combinations(chunk.columns, 2))
-
+    t2 = time.time()
     # tell the function to work with only one chunk
-    mode = 'one_chunk'
-    with Pool(15) as p:
-        p.map(two_genes_mutual, pairs)
+    r = run_chunk(pairs, 'one_chunk', chunk)
+    t3 = time.time()
+    write_chunk(r, outfile)
+    t4 = time.time()
+
 
     # with other chunks
     chunk_iter2 = pd.read_csv(path, chunksize = 50, header = 0, index_col = 0)
@@ -84,13 +52,13 @@ for chunk in chunk_iter1:
             # pairs
             pairs = list(product(chunk.columns, other_chunk.columns))
 
-            mode = 'two_chunk'
-            with Pool(15) as p:
-                p.map(two_genes_mutual, pairs)
+
+            run_chunk(pairs, 'two_chunk', chunk, other_chunk)
+            write_chunk(r, outfile)
 
 
             another_chunk_no += 1
     print(chunk_no, 'done')
-    t2 = time.time()
-    print(t2-t1)
+
+    t5 = time.time()
     chunk_no += 1
