@@ -2,7 +2,7 @@
 
 # input file
 infile = '/home/hermuba/data0118/interpro/ec70_20180929'
-outfile = '/home/hermuba/data0118/goldstandard/tf_intersect'
+outfile = '/home/hermuba/data0118/goldstandard/tf_intersect_rm_GO'
 
 # header
 import pandas as pd
@@ -16,18 +16,20 @@ def parse(infile):
     return(df)
 
 
-def extract_goterm(df):
+def extract_term(df, anno):
     '''
     extract goterm for one qseqid
     return series with qseqid and set of goterms
+
+    input: df = interpro dataframe; anno = 'goterm';'pathway','accession', 'ipr_accession'
     '''
 
 
     # drop those without goterm
-    no_na_df = df.dropna(axis = 'index', subset = ['goterm'])
+    no_na_df = df.dropna(axis = 'index', subset = [anno])
 
     # groupby and combin goterm for a specific qseqid
-    go_term_sum = no_na_df.groupby(by = 'qseqid')['goterm'].apply(lambda x: "%s" % '|'.join(x))
+    go_term_sum = no_na_df.groupby(by = 'qseqid')[anno].apply(lambda x: "%s" % '|'.join(x))
 
     # to remove redundant go terms from concatenation
     no_redun_go = go_term_sum.apply(lambda x: set(x.split('|')))
@@ -36,31 +38,45 @@ def extract_goterm(df):
 
 #out_df = pd.DataFrame()
 
-def link_or_not(args):
+def extract_card(card_df):
+    '''
+    input: card dataframe with rows = representing gene; column = ARO
+    output: series with index = representing gene; value = set of ARO
+    '''
+    card_s = pd.Series(index = card_df.index)
+    for index, row in card_df.iterrows():
+        card_s.loc[index] = set(row.loc[row == 1].index)
+    return(card_s)
 
-    go_set1, go_set2, name1, name2 = args
+def link_or_not(go_set1, go_set2):
+
+
 
     inter = go_set1.intersection(go_set2)
-    #print(type(inter))
+    if 'GO:0003677' in inter:
+        inter.remove('GO:0003677')
+
     if len(inter) > 0:
         answer = 1
     else:
         answer = 0
 
-    with open(outfile, 'a') as f:
-        f.write(name1 + ',' + name2 + ',' + str(answer) + '\n')
+
+    return(answer)
     #out_df = out_df.append([[name1, name2, answer]])
     #print(out_df.shape)
 
-def gold_standard(no_redun_go):
+def gold_standard(anno_df, term):
 
     # write header
-    with open(outfile, 'w') as f:
-        f.write('gene1,gene2,answer\1n')
+    #with open(outfile, 'w') as f:
+    #    f.write('gene1,gene2,answer\n')
 
-
+    s = anno_df[term].dropna() # remove nan
     import itertools
-    all_pairs = itertools.combinations(no_redun_go.index, 2)
+
+    all_pairs = itertools.combinations(s.index, 2)
+
     #print(len(all_pairs))
 
     # multiprocess
@@ -70,10 +86,19 @@ def gold_standard(no_redun_go):
     #from multiprocessing import Pool
     #with Pool(8) as p:
     #    p.map(link_or_not, arg_lists)
-
+    itxn = []
+    n1 = []
+    n2 = []
     for p in all_pairs:
-        link_or_not([no_redun_go[p[0]], no_redun_go[p[1]], p[0], p[1]])
+        l = link_or_not(s[p[0]], s[p[1]])
+        itxn.append(l)
+        n1.append(p[0])
+        n2.append(p[1])
+
+
+    return(n1, n2, itxn)
+
 # execute
-df = parse(infile)
-no = extract_goterm(df)
-gold_standard(no)
+#df = parse(infile)
+#no = extract_goterm(df)
+#gold_standard(no)
