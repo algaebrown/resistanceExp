@@ -1,7 +1,7 @@
 # convert evalue to log evalue
 
 # specify these params
-table_name = 'blastp_out_max_evalue'
+table_name = 'archaea_blastp_out_max_evalue'
 
 # import to connect to db
 import psycopg2
