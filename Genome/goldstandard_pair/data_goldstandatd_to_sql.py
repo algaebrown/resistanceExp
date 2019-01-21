@@ -1,13 +1,13 @@
 #
-goldstandard = '/home/hermuba/data0118/goldstandard/tf_intersect'
+goldstandard = '/home/hermuba/data0118/goldstandard/tf_intersectpathway'
 
 phylo_path = '/home/hermuba/data0118/mutual_info/'
 
-refseq_test = phylo_path + 'blastp_out_max_evalue_quantile_2_mutual'
-eskape_test = phylo_path + 'eskape_blastp_out_max_evalue_ordinary_mutual'
+refseq_test = phylo_path + 'blastp_out_max_evalue_pivot_ordinary40_mutual'
+#eskape_test = phylo_path + 'eskape_blastp_out_max_evalue_ordinary_mutual'
 
 # database parameters
-table_name = 'LLS'
+# table_name = 'LLS'
 
 # import
 import psycopg2
@@ -50,7 +50,7 @@ try:
     params = config()
 
     # test
-    params['database'] = 'hermuba'
+    #params['database'] = 'hermuba'
 
     # connect
     print('connect to db')
@@ -58,8 +58,8 @@ try:
     cur = conn.cursor()
 
     # run
-    #gold_table(cur,conn, goldstandard, 'tf_intersect')
-    mutual_info(cur,conn, refseq_test, 'refseq_quantile_mu')
+    gold_table(cur,conn, goldstandard, 'tf_intersect_pathway')
+    #mutual_info(cur,conn, refseq_test, 'refseq_ordinary_40')
     #mutual_info(cur,conn, eskape_test, 'eskape_mu')
 
 except (Exception, psycopg2.DatabaseError) as error:

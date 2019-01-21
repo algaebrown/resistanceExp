@@ -3,9 +3,9 @@ import math
 from Genome.context.config import config
 params = config()
 
-def find_second_best(db, in_table):
-    # written for test
-    params['database'] = db
+def find_second_best(in_table):
+
+
 
     # connection
     conn=psycopg2.connect(**params)

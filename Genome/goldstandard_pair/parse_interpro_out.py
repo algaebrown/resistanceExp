@@ -1,3 +1,4 @@
+
 # this is a script to parse interpro output ran with the shell script at ~/resistanceExp/Genome/run_interproscan.sh
 
 # input file
@@ -66,11 +67,12 @@ def link_or_not(go_set1, go_set2):
     #out_df = out_df.append([[name1, name2, answer]])
     #print(out_df.shape)
 
-def gold_standard(anno_df, term):
+def gold_standard(anno_df, term, outfile):
 
     # write header
-    #with open(outfile, 'w') as f:
-    #    f.write('gene1,gene2,answer\n')
+    outfile = outfile + term
+    with open(outfile, 'w') as f:
+        f.write('gene_one,gene_two,goldstandard\n')
 
     s = anno_df[term].dropna() # remove nan
     import itertools
@@ -95,8 +97,9 @@ def gold_standard(anno_df, term):
         n1.append(p[0])
         n2.append(p[1])
 
-
-    return(n1, n2, itxn)
+        with open(outfile, 'a') as f:
+            f.write(','.join([p[0], p[1], str(l)])+'\n')
+    #return(n1, n2, itxn)
 
 # execute
 #df = parse(infile)

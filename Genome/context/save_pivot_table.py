@@ -1,7 +1,7 @@
 import psycopg2
 from Genome.context.config import config
 params = config()
-in_table = 'eskape_blastp_out_max_evalue'
+in_table = 'archaea_blastp_out_max_evalue'
 
 base_path = '/home/hermuba/data0118/mutual_info/'+ in_table
 pivot_table = base_path + '_pivot'
@@ -54,7 +54,7 @@ def zero_or_value(e):
 import pandas as pd
 def one_gene(qseqid):
 
-    df = pd.DataFrame(columns = target_g_list, index = [qseqid])
+    df = pd.DataFrame(columns = target_g_list, index = [qseqid], dtype = float)
 
     cur.execute("""
     SELECT target_genome, trans_evalue from {0}

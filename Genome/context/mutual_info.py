@@ -8,11 +8,12 @@ outfile = path + '_mutual'
 
 # input two series, output mutual_info and normalised mutual info
 from sklearn import metrics
-import multiprocessing as mp
+
 from  multiprocessing import Pool
 import time
 import pandas as pd
 from itertools import product, combinations
+
 # entropy
 def entropy(series):
       import scipy.stats as stats
