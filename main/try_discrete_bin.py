@@ -1,8 +1,8 @@
 # pivot
 pivot = 'blastp_out_max_evalue_pivot.smpl'
 
-from Genome.context.discretise import run_chunkwise
+from Genome.context.discretise import *
 
 # discretize using different bins
-for i in [35,45,55]:
-    run_chunkwise('blastp_out_max_evalue_pivot.smpl', ordinary, 'refseq', bins = i)
+for i in [5,10,20,40,60,80]:
+    run_chunkwise('eskape_blastp_out_max_evalue_pivot.smpl', ordinary, 'eskape', bins = i)
