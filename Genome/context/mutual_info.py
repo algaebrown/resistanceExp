@@ -1,9 +1,12 @@
 
 # input: discretised pivot table, two kinds: quantile discretisation and fixed
 in_path = '/home/hermuba/data0118/mutual_info/'
-table_name = 'blastp_out_max_evalue_pivot_ordinary40'
+table_name = 'blastp_out_max_evalue_pivot.smpl_ordinary40'
 
 path = in_path + table_name
+
+#
+path = '/home/hermuba/data0118/domain_abs'
 outfile = path + '_mutual'
 
 # input two series, output mutual_info and normalised mutual info
@@ -49,6 +52,7 @@ with open(outfile, 'w') as f:
 
 for chunk in chunk_iter1:
     print('this is chunk ' , chunk_no)
+    chunk = chunk.loc[list(set(chunk.index))] ############### strang
 
 
     # tranpose uses even more memory, and when they dbecome series, there is no difference. However, tranpose allow faster mutual info calculation (10 times faster)
@@ -68,10 +72,10 @@ for chunk in chunk_iter1:
     another_chunk_no = 0
 
     for other_chunk in chunk_iter2:
-
-        if another_chunk_no <= chunk_no: # means we have calcuated before
+          other_chunk = other_chunk.loc[list(set(other_chunk.index))] ######
+          if another_chunk_no <= chunk_no: # means we have calcuated before
             another_chunk_no += 1
-        else:
+          else:
             # clean data
             print(chunk_no, another_chunk_no, 'processing')
             other_chunk = other_chunk.transpose(copy = False)
