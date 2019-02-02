@@ -1,9 +1,12 @@
-
+ris_file = "/home/hermuba/data0118/annotated_RIS/anno_df"
+pan_file = "/home/hermuba/data0118/cdhit/clstr/pangenome_df/Escherichia0.70.clstr.csv"
+trait_file = '~/data0118/scoary/scoary_trait.csv'
+abs_file = '~/data0118/scoary/gene_abs.Rtab'
 #======generate trait file======
 
 # ris dataframe: select only E.coli
 import pandas as pd
-ris = pd.read_pickle("/home/hermuba/data/annotated_RIS/anno_sps_df")
+ris = pd.read_pickle(ris_file)
 ris_need = ris[['Genome ID', 'Antibiotic', 'Resistant Phenotype', 'Measurement Value', 'Species']]
 ris_need = ris_need.loc[ris_need['Species'] == 'Escherichia']
 # change to binary
@@ -28,18 +31,18 @@ for index, row in ris_need.iterrows():
 
 
 # save trait file to csv
-matrix.to_csv('~/data/genome/scoary_trait.csv')
+matrix.to_csv(trait_file)
 
 #======generate pangenome absence presence pattern======
-pan = pd.read_pickle("/home/hermuba/data/genePredicted/cdhit/ec0102_df")
-pan.to_csv('~/data/genePredicted/cdhit/ec0102.csv')
-
-#======mimicking roary output======
+pan = pd.read_csv(pan_file, index_col = 0, header = 0)
 import numpy as np
-roary = pan.transpose().astype(int).replace(0, np.nan)
-roary.to_csv('~/data/roary.csv')
+pan = pan.iloc[:-1, :]
+pan = pan.astype(int).replace(0, np.nan)
+pan.to_csv(abs_file, index_label = 'Gene')
+
+
 #======run scoary======
 import os
-os.system('scoary -g ~/data/genePredicted/cdhit/ec0102.csv -t ~/data/roary.csv')
+os.system('scoary -g '+ abs_file + ' -t ' + trait_file + ' -s 1 --delimiter ,')
 
 # this script cannot work: pdist: 2 dimensional array required...= =

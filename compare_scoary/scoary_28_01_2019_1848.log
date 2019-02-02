@@ -1,0 +1,180 @@
+01/28/2019 06:48:46 PM    ==== Scoary started ====
+01/28/2019 06:48:46 PM    Command: /home/hermuba/miniconda3/bin/scoary -g /home/hermuba/data0118/scoary/gene_abs.Rtab -t /home/hermuba/data0118/scoary/scoary_trait.csv -s 1 --delimiter ,
+01/28/2019 06:48:46 PM    Reading gene presence absence file
+01/28/2019 06:49:11 PM    Creating Hamming distance matrix based on gene presence/absence
+01/28/2019 06:50:15 PM    Building UPGMA tree from distance matrix
+01/28/2019 06:50:53 PM    Reading traits file
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ceftriaxone. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait amoxicillin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ciprofloxacin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefuroxime. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ceftazidime. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait aztreonam. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait imipenem. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait piperacillin-tazobactam. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait meropenem. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait tobramycin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait tigecycline. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ampicillin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait gentamicin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait amoxicillin-clavunate. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefotaxime. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ertapenem. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait trimethoprim. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefepime. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ampicillin-sulbactam. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait tetracycline. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefazolin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait trimethoprim-sulfamethoxazole. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait amikacin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cephalothin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait polymyxin b. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefoxitin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefalotin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait colistin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait norfloxacin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait levofloxacin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait nitrofurantoin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait doripenem. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cephalexin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait chloramphenicol. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait doxycycline. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait fosfomycin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait ticarcillin-clavunate. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait piperacillin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait cefotaxime-clavunate. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait minocycline. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait azithromycin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait sulfamethoxazole. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait temocillin. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    WARNING: Some isolates have missing values for trait nalidixic acid. Missing-value isolates will not be counted in association analysis towards this trait.
+01/28/2019 06:50:53 PM    ERROR: Some isolates in your gene presence absence file were not represented in your traits file. These will count as MISSING data and will not be included.
+01/28/2019 06:50:53 PM    Finished loading files into memory.
+
+
+01/28/2019 06:50:53 PM    ==== Performing statistics ====
+01/28/2019 06:50:53 PM    -- Filtration options --
+01/28/2019 06:50:53 PM    Individual (Naive):    0.05
+01/28/2019 06:50:53 PM    Collapse genes:    False
+
+
+01/28/2019 06:50:53 PM    Tallying genes and performing statistical analyses
+01/28/2019 06:50:53 PM    Gene-wise counting and Fisher's exact tests for trait: ceftriaxone
+01/28/2019 06:51:00 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:51:00 PM    Gene-wise counting and Fisher's exact tests for trait: amoxicillin
+01/28/2019 06:52:19 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:52:19 PM    Gene-wise counting and Fisher's exact tests for trait: ciprofloxacin
+01/28/2019 06:53:54 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:53:54 PM    Gene-wise counting and Fisher's exact tests for trait: cefuroxime
+01/28/2019 06:55:27 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:55:27 PM    Gene-wise counting and Fisher's exact tests for trait: ceftazidime
+01/28/2019 06:56:56 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:56:56 PM    Gene-wise counting and Fisher's exact tests for trait: aztreonam
+01/28/2019 06:57:26 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:57:26 PM    Gene-wise counting and Fisher's exact tests for trait: imipenem
+01/28/2019 06:58:31 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:58:31 PM    Gene-wise counting and Fisher's exact tests for trait: piperacillin-tazobactam
+01/28/2019 06:59:58 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 06:59:58 PM    Gene-wise counting and Fisher's exact tests for trait: meropenem
+01/28/2019 07:00:31 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:00:31 PM    Gene-wise counting and Fisher's exact tests for trait: tobramycin
+01/28/2019 07:01:02 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:01:02 PM    Gene-wise counting and Fisher's exact tests for trait: tigecycline
+01/28/2019 07:02:20 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:02:21 PM    Gene-wise counting and Fisher's exact tests for trait: ampicillin
+01/28/2019 07:02:57 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:02:57 PM    Gene-wise counting and Fisher's exact tests for trait: gentamicin
+01/28/2019 07:04:28 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:04:28 PM    Gene-wise counting and Fisher's exact tests for trait: amoxicillin-clavunate
+01/28/2019 07:06:06 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:06:06 PM    Gene-wise counting and Fisher's exact tests for trait: cefotaxime
+01/28/2019 07:07:32 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:07:32 PM    Gene-wise counting and Fisher's exact tests for trait: ertapenem
+01/28/2019 07:08:02 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:08:02 PM    Gene-wise counting and Fisher's exact tests for trait: trimethoprim
+01/28/2019 07:08:33 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:08:33 PM    Gene-wise counting and Fisher's exact tests for trait: cefepime
+01/28/2019 07:09:04 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:04 PM    Gene-wise counting and Fisher's exact tests for trait: ampicillin-sulbactam
+01/28/2019 07:09:10 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:10 PM    Gene-wise counting and Fisher's exact tests for trait: tetracycline
+01/28/2019 07:09:15 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:15 PM    Gene-wise counting and Fisher's exact tests for trait: cefazolin
+01/28/2019 07:09:22 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:22 PM    Gene-wise counting and Fisher's exact tests for trait: trimethoprim-sulfamethoxazole
+01/28/2019 07:09:28 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:28 PM    Gene-wise counting and Fisher's exact tests for trait: amikacin
+01/28/2019 07:09:59 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:09:59 PM    Gene-wise counting and Fisher's exact tests for trait: cephalothin
+01/28/2019 07:10:04 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:10:04 PM    Gene-wise counting and Fisher's exact tests for trait: polymyxin b
+01/28/2019 07:10:09 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:10:09 PM    Gene-wise counting and Fisher's exact tests for trait: cefoxitin
+01/28/2019 07:10:39 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:10:39 PM    Gene-wise counting and Fisher's exact tests for trait: cefalotin
+01/28/2019 07:11:06 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:06 PM    Gene-wise counting and Fisher's exact tests for trait: colistin
+01/28/2019 07:11:11 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:11 PM    Gene-wise counting and Fisher's exact tests for trait: norfloxacin
+01/28/2019 07:11:16 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:16 PM    Gene-wise counting and Fisher's exact tests for trait: levofloxacin
+01/28/2019 07:11:22 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:22 PM    Gene-wise counting and Fisher's exact tests for trait: nitrofurantoin
+01/28/2019 07:11:27 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:27 PM    Gene-wise counting and Fisher's exact tests for trait: doripenem
+01/28/2019 07:11:33 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:33 PM    Gene-wise counting and Fisher's exact tests for trait: cephalexin
+01/28/2019 07:11:38 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:38 PM    Gene-wise counting and Fisher's exact tests for trait: chloramphenicol
+01/28/2019 07:11:44 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:44 PM    Gene-wise counting and Fisher's exact tests for trait: doxycycline
+01/28/2019 07:11:49 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:49 PM    Gene-wise counting and Fisher's exact tests for trait: fosfomycin
+01/28/2019 07:11:55 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:11:55 PM    Gene-wise counting and Fisher's exact tests for trait: ticarcillin-clavunate
+01/28/2019 07:12:01 PM    Adding p-values adjusted for testing multiple hypotheses
+01/28/2019 07:12:01 PM    Gene-wise counting and Fisher's exact tests for trait: piperacillin
+01/28/2019 07:12:06 PM    Adding p-values adjusted for testing multiple hypotheses
