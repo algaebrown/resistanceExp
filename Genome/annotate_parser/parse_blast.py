@@ -17,3 +17,7 @@ def parse_diamond(dmnd_file):
     df = pd.read_csv(dmnd_file, names = ['qseqid','qlen', 'sseqid','slen','sstart', 'send', 'qstart', 'qend', 'evalue', 'bitscore', 'stitle', 'qtitle'], delimiter = '\t')
 
     return(df)
+
+def aclame_preprocess(df):
+    # remove bad evalue
+    df = df.loc[df['evalue']<0.00001]
