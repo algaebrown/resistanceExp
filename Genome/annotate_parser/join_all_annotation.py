@@ -24,7 +24,8 @@ gold_anno['resfam'] = resfam_comb
 
 # loose_card
 loose_card = pd.read_pickle('/home/hermuba/data0118/cdhit/EC70_loose_card_df')
-loose_card.set_index('ORF_ID', inplace = True)
+i = loose_card['ORF_ID'].str.split(' ').str[0]
+loose_card.set_index(i, inplace = True)
 
 # parse best ARO hit category
 parsed_category = loose_card['Best_Hit_ARO_category'].apply(lambda x: x.split('; '))
