@@ -1,4 +1,4 @@
-def clstr_abs(filename,dfpath):
+def clstr_abs(genome_list_file,filename,dfpath):
     """
     clstr_to_df turns .clstr file generated from CD-HIT to dataframes. only absensce-presence pattern is returned to reduce memory usage. absence-presence pattern is stored in .csv format
 
@@ -11,11 +11,11 @@ def clstr_abs(filename,dfpath):
     """
     # obtain species list:
     sps_name = filename.split('/')[-1].split('0')[0]
-    genome_list_path = "/home/hermuba/data0118/genomeList/"
+
     header = ','
 
     genome_list = []
-    with open(genome_list_path + sps_name) as sps_list:
+    with open(genome_list_file) as sps_list:
         for line in sps_list:
             header = header+line.replace('\n', '')+','
             genome_list.append(line.replace('\n', ''))
@@ -63,16 +63,16 @@ def clstr_abs(filename,dfpath):
     print("done with ", f_name)
 
 # run for all files
-from os import listdir
-from os.path import isfile, join
-mypath = '/home/hermuba/data0118/cdhit/clstr/'
-onlyfiles = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
+#from os import listdir
+#from os.path import isfile, join
+#mypath = '/home/hermuba/data0118/cdhit/clstr/'
+#onlyfiles = [join(mypath, f) for f in listdir(mypath) if isfile(join(mypath, f))]
 
 # wrapper
-outpath = mypath + 'pangenome_df/'
+#outpath = mypath + 'pangenome_df/'
 def wrap_clstr(f):
     return(clstr_abs(f, outpath))
 
-from multiprocessing import Pool
-with Pool(5) as p:
-    print(p.map(wrap_clstr, onlyfiles))
+#from multiprocessing import Pool
+#with Pool(5) as p:
+#    print(p.map(wrap_clstr, onlyfiles))
