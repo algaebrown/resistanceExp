@@ -14,9 +14,14 @@ os.system('bash ~/resistanceExp/Genome/pangenome_build/run_cdhit.sh' + ' ' + con
 
 # parse to 0101010 file
 d = '/home/hermuba/data0118/cdhit/clstr/pangenome_df/'
+detail = '/home/hermuba/data0118/cdhit/clstr/cluster_detail/'
 clstr_file = '/home/hermuba/data0118/cdhit/clstr/' + generic_fname + '.clstr'
 from Genome.pangenome_intrinsic_info.cdhit_abs_only import clstr_abs
 clstr_abs(glist, clstr_file, d)
+
+# parse cluster detail file (containing header and member ID of each cluster)
+from Genome.pangenome_intrinsic_info.parse_cdhit import clstr_detail
+rep_gene_only(clstr_file, detail_path)
 
 # run CARD: ERROR your shell has not been properly configured to use conda activate
 # THIS STEP NEEDS TO BE DONE SEPERATEL
@@ -37,10 +42,30 @@ os.system('bash ~/resistanceExp/Genome/run/dmnd_nr.sh')
 
 
 # run interproscan
+os.system('bash ~/resistanceExp/Genome/run/run_interproscan.sh')
 
+# concat interproscan outputs
+os.system('bash ~/resistanceExp/Genome/goldstandard_pair/concat_interpro.sh')
 
-# parse all the annotation
+# extract pathway, goterm, ipraccession from interpro outputs
+from Genome.goldstandard_pair.parse_interpro_out import parse, extract_term
+interpro_file = '/home/hermuba/data0118/interpro/all'
+df = parse(interpro_file)
+
+go = extract_term(df, 'goterm')
+path = extract_term(df, 'pathway')
+ipr = extract_term(df, 'ipr_accession')
+
+# parse card
+
+# parse cog
+
+# parse aclame, drug target, nr
+
+# parse resfam
 
 # run hypothetical protein, and generate pan-genome no. core/accessory
 
-# join all the annotation
+# read cluster_detail
+
+# join all information
