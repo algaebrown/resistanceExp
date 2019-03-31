@@ -37,7 +37,7 @@ def extract_term(df, anno):
 
     return(no_redun_go)
 
-#out_df = pd.DataFrame()
+
 
 def extract_card(card_df):
     '''
