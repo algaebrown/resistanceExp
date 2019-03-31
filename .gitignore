@@ -9,3 +9,11 @@
 
 # Python egg metadata, regenerated from source files by setuptools.
 /*.egg-info
+
+# jupyter checkpoints 
+**/.ipynb_checkpoints/
+
+# temp
+*.swp
+*.swo
+**/temp/
