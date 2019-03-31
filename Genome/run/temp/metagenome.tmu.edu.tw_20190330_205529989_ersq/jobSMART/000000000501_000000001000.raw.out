@@ -1,0 +1,1277 @@
+hmmpfam - search one or more sequences against HMM database
+HMMER 2.3.2 (Oct 2003)
+Copyright (C) 1992-2003 HHMI/Washington University School of Medicine
+Freely distributed under the GNU General Public License (GPL)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+HMM file:                 data/smart/7.1/smart.HMMs.bin
+Sequence file:            /home/hermuba/resistanceExp/Genome/run/temp/metagenome.tmu.edu.tw_20190330_205529989_ersq//jobSMART/000000000501_000000001000.fasta
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query sequence: 501
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 502
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 503
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 504
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 505
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00471                                                  47.4    1.9e-09   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00471    1/1      22   141 ..     1    59 []    47.4  1.9e-09
+//
+
+Query sequence: 506
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00528                                                 104.8      1e-26   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00528    1/1      87   135 ..     1    48 []   104.8    1e-26
+//
+
+Query sequence: 507
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model            Description                            Score    E-value  N 
+--------         -----------                            -----    ------- ---
+SM01005                                                 221.7    6.6e-62   1
+
+Parsed for domains:
+Model            Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------         ------- ----- -----    ----- -----      -----  -------
+SM01005            1/1     232   356 .]     1   137 []   221.7  6.6e-62
+//
+
+Query sequence: 508
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model           Description                             Score    E-value  N 
+--------        -----------                             -----    ------- ---
+SM00839                                                 326.9    1.4e-93   1
+
+Parsed for domains:
+Model           Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------        ------- ----- -----    ----- -----      -----  -------
+SM00839           1/1     204   445 ..     1   265 []   326.9  1.4e-93
+//
+
+Query sequence: 509
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 510
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 511
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 512
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model     Description                                   Score    E-value  N 
+--------  -----------                                   -----    ------- ---
+SM01150                                                 781.9   1.5e-230   1
+
+Parsed for domains:
+Model     Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------  ------- ----- -----    ----- -----      -----  -------
+SM01150     1/1      11   401 ..     1   436 []   781.9 1.5e-230
+//
+
+Query sequence: 513
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 514
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00382                                                 121.5    9.1e-32   2
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00382    1/2      28   230 ..     1    92 []    62.0  7.5e-14
+SM00382    2/2     344   514 ..     1    92 []    59.5  4.3e-13
+//
+
+Query sequence: 515
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 516
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00937                                                 254.8    6.8e-72   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00937    1/1      63   178 ..     1   138 []   254.8  6.8e-72
+//
+
+Query sequence: 517
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 518
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00267                                                 207.9      9e-58   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00267    1/1     238   408 .]     1   176 []   207.9    9e-58
+//
+
+Query sequence: 519
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 520
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 521
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model      Description                                  Score    E-value  N 
+--------   -----------                                  -----    ------- ---
+SM00530                                                  35.6    6.6e-06   1
+
+Parsed for domains:
+Model      Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------   ------- ----- -----    ----- -----      -----  -------
+SM00530      1/1      12    67 ..     1    56 []    35.6  6.6e-06
+//
+
+Query sequence: 522
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 523
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 524
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 525
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 526
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 527
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 528
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00518                                                 501.8   3.2e-146   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00518    1/1       3   279 ..     1   299 []   501.8 3.2e-146
+//
+
+Query sequence: 529
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 530
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 531
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model            Description                            Score    E-value  N 
+--------         -----------                            -----    ------- ---
+SM00859                                                 122.6    4.4e-32   1
+
+Parsed for domains:
+Model            Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------         ------- ----- -----    ----- -----      -----  -------
+SM00859            1/1       6   121 ..     1   174 []   122.6  4.4e-32
+//
+
+Query sequence: 532
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 533
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 534
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 535
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 536
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 537
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 538
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 539
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 540
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00052                                                 374.0   9.3e-108   1
+SM00267                                                  76.9    2.5e-18   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00267    1/1     319   480 ..     1   176 []    76.9  2.5e-18
+SM00052    1/1     492   735 ..     1   255 []   374.0 9.3e-108
+//
+
+Query sequence: 541
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00634                                                 165.4    5.5e-45   5
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00634    1/5     803   889 ..     1    97 []     3.2     0.47
+SM00634    2/5     901   992 ..     1    97 []    66.3    4e-15
+SM00634    3/5    1001  1093 ..     1    97 []    34.0    2e-05
+SM00634    4/5    1106  1197 ..     1    97 []    33.6  2.6e-05
+SM00634    5/5    1208  1302 ..     1    97 []    28.3   0.0011
+//
+
+Query sequence: 542
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 543
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model          Description                              Score    E-value  N 
+--------       -----------                              -----    ------- ---
+SM00778                                                  69.2      5e-16   1
+
+Parsed for domains:
+Model          Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------       ------- ----- -----    ----- -----      -----  -------
+SM00778          1/1      32    68 ..     1    41 []    69.2    5e-16
+//
+
+Query sequence: 544
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 545
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 546
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+SM00327                                                  52.4      6e-11   1
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+SM00327    1/1     214   373 ..     1   193 []    52.4    6e-11
+//
+
+Query sequence: 547
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 548
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 549
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 550
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 551
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 552
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 553
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 554
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model     Description                                   Score    E-value  N 
+--------  -----------                                   -----    ------- ---
+SM00448                                                  91.3    1.1e-22   1
+SM00421                                                  83.8    2.1e-20   1
+
+Parsed for domains:
+Model     Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------  ------- ----- -----    ----- -----      -----  -------
+SM00448     1/1       1   113 [.     1   150 []    91.3  1.1e-22
+SM00421     1/1     141   198 ..     1    57 []    83.8  2.1e-20
+//
+
+Query sequence: 555
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 556
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 557
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 558
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 559
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 560
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 561
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 562
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 563
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 564
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 565
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 566
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 567
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 568
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 569
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 570
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 571
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 572
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 573
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 574
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 575
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 576
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 577
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model         Description                               Score    E-value  N 
+--------      -----------                               -----    ------- ---
+SM00928                                                  89.4    4.3e-22   1
+
+Parsed for domains:
+Model         Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------      ------- ----- -----    ----- -----      -----  -------
+SM00928         1/1     336   381 ..     1    46 []    89.4  4.3e-22
+//
+
+Query sequence: 578
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 579
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 580
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 581
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 582
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 583
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model    Description                                    Score    E-value  N 
+-------- -----------                                    -----    ------- ---
+	[no hits above thresholds]
+
+Parsed for domains:
+Model    Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+-------- ------- ----- -----    ----- -----      -----  -------
+	[no hits above thresholds]
+//
+
+Query sequence: 584
+Accession:      [none]
+Description:    [none]
+
+Scores for sequence family classification (score includes all domains):
+Model     Description                                   Score    E-value  N 
+--------  -----------                                   -----    ------- ---
+SM00919                                                 486.8   9.7e-142   1
+SM01274                                                 292.9    2.4e-83   1
+
+Parsed for domains:
+Model     Domain  seq-f seq-t    hmm-f hmm-t      score  E-value
+--------  ------- ----- -----    ----- -----      -----  -------
+SM01274     1/1      18   151 ..     1   183 []   292.9  2.4e-83
