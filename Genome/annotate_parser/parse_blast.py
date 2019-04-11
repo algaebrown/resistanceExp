@@ -14,10 +14,12 @@ def parse_diamond(dmnd_file):
     input: file from Genome/run/dmnd_nr.sh; storing in data0118/cdhit/dmnd_nr;
     output: dataframe
     '''
-    df = pd.read_csv(dmnd_file, names = ['qseqid','qlen', 'sseqid','slen','sstart', 'send', 'qstart', 'qend', 'evalue', 'bitscore', 'stitle', 'qtitle'], delimiter = '\t')
+    df = pd.read_csv(dmnd_file, names = ['qseqid','qlen', 'sseqid','slen','sstart', 'send', 'qstart', 'qend', 'evalue', 'bitscore', 'stitle'], delimiter = '\t')
 
     return(df)
 
 def aclame_preprocess(df):
     # remove bad evalue
     df = df.loc[df['evalue']<0.00001]
+
+    return(df)
