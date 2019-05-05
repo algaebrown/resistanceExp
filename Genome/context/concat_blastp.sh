@@ -1,4 +1,6 @@
 #!/bin/bashx
+# $1=output file
+# $2=folder containing blast result
 
 for file in *
 do
