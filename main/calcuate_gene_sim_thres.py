@@ -37,3 +37,13 @@ passed = candidates.loc[candidates > card.mean()].index
 
 # how many passed are resfam genes
 included_and_res = set(passed).intersection(included_resfam)
+
+# extract candidate network
+passed_adj = adj.loc[passed.append(card_index), passed.append(card_index)]
+
+# turn to network
+import networkx as nx
+passed_net = nx.convert_matrix.from_pandas_adjacency(passed_adj)
+
+# write edgelist to file
+nx.readwrite.edgelist.write_weighted_edgelist(passed_net, '/home/hermuba/data0118/network1122/passed_edgelist', delimiter = ',')
