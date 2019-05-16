@@ -3,8 +3,8 @@
 
 
 # specify those params:
-table_name = 'eskape_blastp_out'
-infile = '/home/hermuba/data0118/concat_phylo/test.tab'
+table_name = 'blastp_out'
+infile = '/home/hermuba/data0118/concat_phylo/refseq.tab'
 
 import psycopg2
 from Genome.context.config import config
@@ -62,7 +62,7 @@ try:
     params = config()
 
     # test
-    params['database'] = 'hermuba'
+    #params['database'] = 'hermuba'
 
     # connect
     print("connecting to the DB")
@@ -70,22 +70,22 @@ try:
     cur = conn.cursor()
 
     # write to database
-    print("writing to database")
-    blastp_to_table(cur,conn, infile, table_name)
+    #print("writing to database")
+    #blastp_to_table(cur,conn, infile, table_name)
 
     # find max evalue
-    print("finding max evalue")
-    max_evalue(cur, conn, table_name)
+    #print("finding max evalue")
+    #max_evalue(cur, conn, table_name)
 
     # find second best evalue
-    print("findin second best evalue of all gene pairs")
+    print("finding second best evalue of all gene pairs")
     from Genome.context.transform_evalue import *
     second = find_second_best(cur, conn, table_name + '_max_evalue')
     print("second best evalue is "+ str(second))
 
     # transform based on second best evalue
     transform_evalue(cur, conn, table_name + '_max_evalue', second)
-
+    print("transformation complete")
 
 
 

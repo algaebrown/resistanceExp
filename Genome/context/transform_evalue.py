@@ -7,19 +7,13 @@ def find_second_best(cur, conn, table_name):
 
     # select the smallest and second smallest e-value
     cur.execute("""
-    select t.e from (select to_char(evalue,'EEEE') as e,dense_rank() over (order by evalue ASC) as dense_rank from {0}) as t where t.dense_rank <= 2;
+    select t.e from (select to_char(evalue,'EEEE') as e,dense_rank() over (order by evalue ASC) as dense_rank from {0}) as t where t.dense_rank = 2;
     """.format(table_name))
 
-    second = cur.fetchall()
-
-    if float(second[0][0])!= 0:
-        number = float(second[0][0])
-    elif float(second[1][0])!= 0:
-        number = float(second[1][0])
-
+    second = cur.fetchone()
     #transform
 
-    power = -math.log(number)
+    power = -math.log(float(second[0]))
 
     # ceiling so that there will not be anythin > 1
     ceil_power = math.ceil(power)

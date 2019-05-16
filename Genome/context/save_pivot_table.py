@@ -1,10 +1,10 @@
 import psycopg2
 from Genome.context.config import config
 params = config()
-in_table = 'archaea_blastp_out_max_evalue'
+in_table = 'blastp_out_max_evalue'
 
 base_path = '/home/hermuba/data0118/mutual_info/'+ in_table
-pivot_table = base_path + '_pivot'
+pivot_table = base_path + '_pivot_new'
 
 conn = psycopg2.connect(**params)
 cur = conn.cursor()
