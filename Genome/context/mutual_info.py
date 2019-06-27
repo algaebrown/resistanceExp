@@ -61,7 +61,9 @@ if os.path.isfile(checkpoint_file) == False:
       print("no checkpoint exist")
       # start from scratch
       chunk_no = 0
-      another_chunk_no = -1 # not even started yet
+
+      cpk_chunk_no = 0
+      cpk_another_chunk_no = -1
 
       # write header to new csv file
       with open(outfile, 'w') as f:
@@ -71,22 +73,23 @@ else:
       # restore to previous point
       with open(checkpoint_file, 'rb') as f:
             cpk = pickle.load(f)
-            chunk_no = cpk['chunk_no']
-            another_chunk_no = cpk['another_chunk_no']
+            cpk_chunk_no = cpk['chunk_no']
+            cpk_another_chunk_no = cpk['another_chunk_no']
 
-print("file status: ", str(chunk_no), str(another_chunk_no))
+print("file status: ", str(cpk_chunk_no), str(cpk_another_chunk_no))
 
 for chunk in chunk_iter1:
 
-    print('starting chunk ' , chunk_no)
-    create_checkpoint(chunk_no, -1, checkpoint_file)
 
-    if chunk_no > 0: # need to skip some
-          for i in range(chunk_no):
+
+
+    if cpk_chunk_no > 0: # need to skip some
+          chunk_no = cpk_chunk_no
+          for i in range(cpk_chunk_no):
                 chunk = next(chunk_iter1)
                 print("skipping ",str(i))
-                i += 1
 
+    create_checkpoint(chunk_no, -1, checkpoint_file)
     # tranpose uses even more memory, and when they dbecome series, there is no difference. However, tranpose allow faster mutual info calculation (10 times faster)
     chunk = chunk.transpose(copy = False)
     chunk.dropna(axis = 'index', inplace = True)
@@ -94,8 +97,8 @@ for chunk in chunk_iter1:
 
 
     # check if "another chunk" has already started"; if not, do within the chunk
-    if another_chunk_no == -1: # not started yet
-
+    if cpk_another_chunk_no == -1: # not started yet
+          print("starting ", str(chunk_no))
 
           # all combinations of a chunk
           pairs = list(combinations(chunk.columns, 2))
@@ -104,23 +107,22 @@ for chunk in chunk_iter1:
           mode = 'one_chunk'
           with Pool(15) as p:
                 p.map(two_genes_mutual, pairs)
+          # initiate
+          another_chunk_no = 0
 
     # with other chunks
     chunk_iter2 = pd.read_csv(path, chunksize = 50, header = 0, index_col = 0)
 
-    if another_chunk_no == -1: # not yet started this; initiate with 0; else; follow the thing from cpk
-          another_chunk_no = 0
-
     for other_chunk in chunk_iter2:
-
-          # need to skip some
-          if another_chunk_no > 0:
-                for i in range(another_chunk_no):
+          # skipping some if already done
+          if cpk_another_chunk_no > 0: # started from midpoint
+                another_chunk_no = cpk_another_chunk_no
+                for i in range(cpk_anther_chunk_no):
                       other_chunk = next(chunk_iter2)
                       print("skipping ", str(i))
-                      i += 1
 
 
+          # check if this is necessary
           if another_chunk_no <= chunk_no: # means we have calcuated before
             another_chunk_no += 1
           else:
@@ -140,9 +142,10 @@ for chunk in chunk_iter1:
 
 
             another_chunk_no += 1
+
     print(chunk_no, 'done')
-    t2 = time.time()
-    print(t2-t1)
+
+
     chunk_no += 1
 
 # in the end, delete checkpoint file
