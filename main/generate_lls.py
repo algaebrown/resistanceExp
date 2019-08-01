@@ -2,6 +2,10 @@ import pandas as pd
 from Genome.goldstandard_pair.lls import *
 
 # wrap for domain
+gd = '/home/hermuba/data0118/goldstandard/tf_intersect_pathway_rm_plasmid.smpl'
+gold = read_gold(gd)
+
+##### not finished
 
 def wrap_for_diff_score(score, all_chunk):
     lls_score = lls_for_domain(all_chunk, score)

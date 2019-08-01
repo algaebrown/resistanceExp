@@ -1,11 +1,11 @@
 # card_net: all genes with edges with card genes
 import pandas as pd
 
-card_net = '/home/hermuba/data0118/network1122/card_lls' # no header
+card_net = '/home/hermuba/data0118/network1122/card_rm_plasmid_lls' # no header
 net = pd.read_csv(card_net, index_col = 0, names = ['gene_one', 'gene_two', 'combined_lls']) # 40000 lines
 
 # annotation =
-gold_anno = pd.read_csv('/home/hermuba/data0118/network1122/gold_anno.csv', header = 0, index_col = 0)
+gold_anno = pd.read_csv('/home/hermuba/data0118/goldstandard/ec_rmplasmid_node_anno.csv', header = 0, index_col = 0)
 
 # form network by networkx
 import networkx as nx
@@ -46,4 +46,4 @@ import networkx as nx
 passed_net = nx.convert_matrix.from_pandas_adjacency(passed_adj)
 
 # write edgelist to file
-nx.readwrite.edgelist.write_weighted_edgelist(passed_net, '/home/hermuba/data0118/network1122/passed_edgelist', delimiter = ',')
+nx.readwrite.edgelist.write_weighted_edgelist(passed_net, '/home/hermuba/data0118/network1122/passed_rm_plasmid_sedgelist', delimiter = ',')

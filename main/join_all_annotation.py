@@ -61,7 +61,7 @@ for p in parsed_category:
 
     n += 1
 all_category.fillna(False, inplace = True)
-all_category.to_csv('/home/hermuba/Escherichia0.70rm_plasmid_card.csv')
+all_category.to_csv('/home/hermuba/data0118/Escherichia0.70rm_plasmid_card.csv')
 
 
 # RESFAM by Gautam Dantas lab

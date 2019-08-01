@@ -1,7 +1,7 @@
 
 # input: discretised pivot table, two kinds: quantile discretisation and fixed
 in_path = '/home/hermuba/data0118/mutual_info/'
-table_name = 'blastp_out_max_evalue_pivot_new_ordinary40'
+table_name = 'eskape_blastp_out_max_evalue_pivot_new_ordinary40'
 
 path = in_path + table_name
 
@@ -85,9 +85,11 @@ for chunk in chunk_iter1:
 
     if cpk_chunk_no > 0: # need to skip some
           chunk_no = cpk_chunk_no
+
           for i in range(cpk_chunk_no):
                 chunk = next(chunk_iter1)
                 print("skipping ",str(i))
+          cpk_chunk_no = -1
 
     create_checkpoint(chunk_no, -1, checkpoint_file)
     # tranpose uses even more memory, and when they dbecome series, there is no difference. However, tranpose allow faster mutual info calculation (10 times faster)
@@ -117,10 +119,11 @@ for chunk in chunk_iter1:
           # skipping some if already done
           if cpk_another_chunk_no > 0: # started from midpoint
                 another_chunk_no = cpk_another_chunk_no
-                for i in range(cpk_anther_chunk_no):
+
+                for i in range(cpk_another_chunk_no):
                       other_chunk = next(chunk_iter2)
                       print("skipping ", str(i))
-
+                cpk_another_chunk_no = -1 # only use once
 
           # check if this is necessary
           if another_chunk_no <= chunk_no: # means we have calcuated before

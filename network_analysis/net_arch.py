@@ -29,7 +29,7 @@ def power_law(net):
     input: networkx net
     output: logx, logy, line, slope, r_value, p_value
     '''
-    deg_seq = np.asarray([d for n, d in net.degree()])
+    deg_seq = np.asarray(list(net.degree().values()))
     hist, bins = np.histogram(deg_seq, bins = 50)
     print('most connected node degree ', np.max(deg_seq))
 

@@ -24,4 +24,28 @@ def process_card(df):
 
     # drop old ORF ID
     df.drop('ORF_ID', axis = 1)
+
     return(df)
+
+
+def extract_ARO(df):
+    '''
+    to extract ARO category from dataframe from `process_card`
+    input: dataframe from process_card
+    output: dataframe with ARO category as columns, genes as names.
+    '''
+    parsed_category = df['Best_Hit_ARO_category'].apply(lambda x: x.split('; '))
+    flattened_list = list(set([y for x in parsed_category for y in x])) # unique categories
+
+    # save to dataframe
+    all_category = pd.DataFrame(index = df.index, columns = flattened_list)
+
+    n = 0
+    for p in parsed_category:
+        i = df.index[n] # gene name
+        all_category.loc[i, p] = True
+        n += 1
+
+    all_category.fillna(False, inplace = True)
+
+    return(all_category)

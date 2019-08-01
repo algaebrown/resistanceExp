@@ -14,7 +14,7 @@ def read_edge(net_name):
         net = nx.read_edgelist(f, nodetype = str, comments = '#')
     return(net)
 
-string = read_edge('string')
-refseq = read_edge('refseq')
-eskape = read_edge('eskape')
-domain = read_edge('domain')
+string = read_edge('string_rm_plasmid')
+refseq = read_edge('refseq_rm_plasmid')
+eskape = read_edge('eskape_rm_plasmid')
+domain = read_edge('domain_rm_plasmid')

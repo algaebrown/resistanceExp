@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-clsi = pd.read_excel("/home/hermuba/res/data/anootated_RIS/CLSI_m100_breakpoint.xlsx")
+clsi = pd.read_excel("/home/hermuba/data/annotated_RIS/CLSI_m100_breakpoint.xlsx")
 category = clsi[['category', 'drug']]
 category = category.drop_duplicates(subset = 'drug')
 order = ['penicillins', 'b_lactam_inhibitor', 'cephems', 'monobactams', 'carbapenems', 'lipopeptides', 'phenicols', 'macrolides', 'aminoglycosides', 'tetracyclines', 'quinolones', 'folate_path','nitrofurans', 'fosfomycins', 'licosamide', 'pleuromutilin']

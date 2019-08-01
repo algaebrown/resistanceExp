@@ -1,12 +1,12 @@
 # combined network
-net = '/home/hermuba/data0118/network1122/combined_baye'
+net = '/home/hermuba/data0118/network1122/combined_rm_plasmid_baye'
 
 # output file:
-output_net = '/home/hermuba/data0118/network1122/card_lls'
+output_net = '/home/hermuba/data0118/network1122/card_rm_plasmid_lls'
 
 # annotations
 import pandas as pd
-gold_anno = pd.read_csv('/home/hermuba/data0118/network1122/gold_anno.csv', header = 0, index_col = 0)
+gold_anno = pd.read_csv('/home/hermuba/data0118/network1122/ec_rmplasmid_node_anno.csv', header = 0, index_col = 0)
 
 # find genes with card annotation!
 card = gold_anno.loc[gold_anno['is_card'] == True].index
