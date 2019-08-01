@@ -17,3 +17,6 @@
 *.swp
 *.swo
 **/temp/
+
+# pycharm
+.idea
