@@ -1,5 +1,5 @@
-gold=~/data0118/goldstandard/tf_intersectGO
-sampled_gold=~/data0118/goldstandard/tf_intersectGO.smpl
+gold=~/data0118/goldstandard/tf_intersect_pathway_rm_plasmidpathway
+sampled_gold=~/data0118/goldstandard/tf_intersect_pathway_rm_plasmid.smpl
 
 # start an empty file
 touch $sampled_gold
