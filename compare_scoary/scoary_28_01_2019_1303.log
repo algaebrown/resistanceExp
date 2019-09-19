@@ -1,3 +1,0 @@
-01/28/2019 01:03:33 PM    ==== Scoary started ====
-01/28/2019 01:03:33 PM    Command: /home/hermuba/miniconda3/bin/scoary -g /home/hermuba/data0118/scoary/gene_abs.Rtab -t /home/hermuba/data0118/scoary/scoary_trait.csv -s 1
-01/28/2019 01:03:33 PM    Reading gene presence absence file
