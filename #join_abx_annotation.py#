@@ -1,0 +1,31 @@
+# putative genes with of each antibiotics (either from scoary, from network candidates, from significant genes), plot heatmap and compare to current knowledge(resfam, CARD)
+
+import pandas as pd
+import numpy as np
+import math
+def preprocess_odds_df(df):
+    '''
+    to preprocess_odds_ratio_df
+    input: df with odds ratio for each gene for each abx
+
+    columns = genes
+    index = abx
+    '''
+
+    # select only genes with data
+    df = df.loc[:, df.count()>1]
+
+    # replace inf and -inf
+    maximum = df.max().max()
+    minimum = df.min().min()
+
+    df = df.replace(np.inf, maximum*10).replace(-np.inf, minimum*0.1).fillna(1)
+    return(df)
+
+def log_odds(df):
+    '''
+    do log10 transform of preprocessed df
+    '''
+    return(df.applymap(math.log10))
+
+#=======

@@ -4,6 +4,8 @@ pan_abs = '/home/hermuba/data0118/cdhit/clstr/pangenome_df/Escherichia0.70rm_pla
 pan_detail = '/home/hermuba/data0118/cdhit/clstr/cluster_detail/Escherichia0.70rm_plasmid.clstr'
 card = '/home/hermuba/data0118/cdhit/card/Escherichia0.70rm_plasmid.txt'
 resfam_file = '/home/hermuba/data0118/cdhit/Escherichia0.70rm_plasmid-resfam'
+resfam_metadata = '/nas/hermuba/180102_resfams_metadata_updated_v122.xlsx' # annotation of each resfam ID belongs to what category
+
 aclame_file = '/home/hermuba/data0118/cdhit/Escherichia0.70rm_plasmid-aclame'
 drug_file = '/home/hermuba/data0118/cdhit/Escherichia0.70rm_plasmid-drug_target'
 nr_file = '/home/hermuba/data0118/cdhit/dmnd_nr/Escherichia0.70rm_plasmid'
