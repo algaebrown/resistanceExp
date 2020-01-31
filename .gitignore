@@ -20,3 +20,11 @@
 
 # pycharm
 .idea
+
+# figures
+*.png
+*.pdf
+
+# ontology
+gene2go
+*.obo
