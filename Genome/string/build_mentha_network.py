@@ -9,7 +9,7 @@ node = read_node_to_df(node_path)
 selected_nodes = filter_node(node)
 
 # read the edge
-edge_path = '/home/hermuba/data0118/map_to_exist_net/511145.protein.actions.v11.0.txt'
+edge_path = '/home/hermuba/data0118/map_to_exist_net/511145.protein.links.full.v11.0.txt'
 edge = string_edge_to_df(edge_path)
 
 

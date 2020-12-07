@@ -1,5 +1,6 @@
-gold=~/data0118/goldstandard/tf_intersect_pathway_rm_plasmidpathway
-sampled_gold=~/data0118/goldstandard/tf_intersect_pathway_rm_plasmid.smpl
+gold=$1 # input file
+sampled_gold=$2 # output file
+n_sample=$3 # number of lines to sample
 
 # start an empty file
 touch $sampled_gold
@@ -8,4 +9,4 @@ touch $sampled_gold
 head -n 1 $gold > $sampled_gold
 
 # sample from the second line
-tail -n +2 $gold | shuf -n 100000 >> $sampled_gold
+tail -n +2 $gold | shuf -n $n_sample >> $sampled_gold

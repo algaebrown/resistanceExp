@@ -27,14 +27,15 @@ def extended_core(n, bins):
 def no_core(count, thres):
     return(len(count.loc[count >= thres]))
 
-def pangenome_profile(df):
+import math
+def pangenome_profile(df, bins = 100):
 
     grow = pd.DataFrame(columns = ['core', 'accessory', 'pangenome'])
 
     no_of_sps = df.shape[1]
 
 
-    for i in range(no_of_sps):
+    for i in range(0,no_of_sps, math.ceil(no_of_sps/bins)): # cut number of genomes into 100 bins to save computational power
 
         count = df.iloc[:, :i+1] # index = sps; col = gene
 

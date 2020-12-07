@@ -1,12 +1,11 @@
 import pandas as pd
 
-def link_or_not(go_set1, go_set2):
-
-
+def link_or_not(go_set1, go_set2, large_term_to_remove = None):
+    ''' decide if there is term overlapping'''
 
     inter = go_set1.intersection(go_set2)
-    if 'GO:0003677' in inter:
-        inter.remove('GO:0003677')
+    if len(large_term_to_remove) > 0:
+        [inter.remove(term) for term in large_term_to_remove if term in inter]
 
     if len(inter) > 0:
         answer = 1
@@ -18,8 +17,14 @@ def link_or_not(go_set1, go_set2):
     #out_df = out_df.append([[name1, name2, answer]])
     #print(out_df.shape)
 
-def gold_standard(anno_df, term, outfile):
 
+    
+
+def gold_standard(anno_df, term, outfile, large_term_to_remove = None):
+    ''' generated goldstandard pair to validate network 
+    anno_df: dataframe with annotation 'GO', 'pathway'
+    
+    '''
     # write header
     outfile = outfile + term
     with open(outfile, 'w') as f:
@@ -35,7 +40,7 @@ def gold_standard(anno_df, term, outfile):
     n1 = []
     n2 = []
     for p in all_pairs:
-        l = link_or_not(s[p[0]], s[p[1]])
+        l = link_or_not(s[p[0]], s[p[1]], large_term_to_remove)
         itxn.append(l)
         n1.append(p[0])
         n2.append(p[1])
