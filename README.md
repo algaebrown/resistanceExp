@@ -4,6 +4,11 @@ Lab notebook the following research:
 1. A pan-genome-based machine learning approach for predicting antimicrobial resistance activities of the Escherichia coli strains. HL Her, YW Wu. Bioinformatics 34 (13), i89-i95(2018)
 2. PangenomeNet: A pan-genome-based functional network provide mechanistic view on Meropenem Resistome for Escherichia coli strains. Hsuan-Lin Her, Po-Ting Lin, and Yu-Wei Wu. (In preperation)
 
+# The code for building [2] are in `main/`:
+follow the number preceding the scripts to reproduce pangenomeNet work. You will need to install many tools. We are working on refactoring the pipeline into snakemake.
+
+
+
 # File structure:
 1. in **Drug** folder, there are codes for TMACC, CHEBI, all kinds of drug database and chemical descriptor
 2. in **Genome** folder, codes are about pan-genome construction,
