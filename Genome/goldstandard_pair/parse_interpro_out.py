@@ -2,6 +2,11 @@
 
 # header
 import pandas as pd
+onto_root = '/home/hermuba/data0118/ontologies/'
+from goatools.obo_parser import GODag
+from collections import defaultdict
+obodag = GODag(onto_root + "go-basic.obo")
+
 def parse(infile):
     h = ['qseqid', 'seq_md5', 'len', 'analysis', 'accession', 'description', 'start', 'end', 'evalue', 'status', 'date', 'ipr_accession', 'ipr_describe', 'goterm', 'pathway']
 
@@ -22,6 +27,7 @@ def extract_term(df, anno):
 
     # drop those without goterm
     no_na_df = df.dropna(axis = 'index', subset = [anno])
+    no_na_df = no_na_df.loc[no_na_df[anno]!='-']
 
     # groupby and combin goterm for a specific qseqid
     go_term_sum = no_na_df.groupby(by = 'qseqid')[anno].apply(lambda x: "%s" % '|'.join(x))
@@ -31,6 +37,20 @@ def extract_term(df, anno):
 
     return(no_redun_go)
 
+def seperate_by_namespace(go, obodag = obodag):
+    go_by_ns = pd.DataFrame()
+    for gene_id in go.index:
+        terms = go[gene_id]
+        by_namespace = defaultdict(set)
+        for t in list(terms):
+            namespace = obodag[t].namespace
+            by_namespace[namespace].add(t)
+        go_by_ns = go_by_ns.append(by_namespace, ignore_index = True)
+    go_by_ns.index = go.index
+    return go_by_ns
+            
+            
+            
 
 def extract_card(card_df):
     '''
